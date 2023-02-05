@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="/public/output.css" rel="stylesheet" />
+    <title>TO DO LIST</title>
+  </head>
+  <body class="bg-gray-900 h-screen flex flex-col items-center justify-start ">
+    <header class="flex flex-col items-center my-4 md:my-6">
+      <h1 class="font-bold text-white text-2xl mb-2 md:text-3xl">TO DO LIST</h1>
+      <p class="text-white text-sm md:text-[1rem]">Undone work :<span class="ml-1" id="undoneWork"></span></p>
+    </header>
+    <section class="flex flex-col gap-2 items-center mb-4 md:mb-8 md:gap-3">
+      <div class="relative w-60 h-8 md:w-80 md:h-10">
+        <select
+          id="selected-todo"
+          class="w-full rounded-sm px-2 h-full text-gray-900 text-md font-bold "
+        >
+          <option value="all">ALL</option>
+          <option value="completed">completed</option>
+          <option value="uncompleted">uncompleted</option>
+        </select>
+      </div>
+      <div>
+        <input
+          type="text"
+          id="serch"
+          class="w-60 py-1 px-2 rounded-sm md:w-80 md:h-10"
+          placeholder="search for ..."
+        />
+      </div>
+    </section>
+    <section class="flex flex-col gap-2 items-center ">
+      <form
+        class="bg-white w-72 flex justify-between items-center px-2 py-1 rounded-sm font-bold md:w-96 md:h-10 md:text-sm"
+      >
+        <input
+          type="text"
+          id="input-value"
+          class="w-full focus:outline-none"
+          placeholder="add somthing"
+        />
+        <button id="icon-todo" class="text-green-900" type="submit">
+          <i class="fa-sharp fa-solid fa-circle-plus"></i>
+        </button>
+      </form>
+      <ul id="todo-contaner" class="flex flex-col items-center"></ul>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>
