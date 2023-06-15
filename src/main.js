@@ -4,6 +4,7 @@ const contanirTodo=document.querySelector("#todo-contaner");
 const selectTodo=document.querySelector("#selected-todo");
 const undoneWork=document.querySelector("#undoneWork");
 const serch=document.querySelector("#serch");
+import "./output.css"
 
 addTodo.addEventListener("click",add);
 contanirTodo.addEventListener("click",chickRemove);
